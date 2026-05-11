@@ -12,75 +12,65 @@ import ContainerBenefits from "../components/containerbenefits.jsx";
 import ContainerService from "../components/containerService.jsx";
 import ContainerAvaliations from "../components/containerAvaliations.jsx";
 import Footer from "../components/footer.jsx";
-
-
-
-
+import ScrollReveal from "../components/ScrowReveal.jsx";
 
 function Home() {
   return (
     <div className="home-container">
-      <Navbar /> 
-      
-      <div className="home-content"> 
-        <Hero 
-          imagem={BackgroundHero2} 
-          titulo="Segurança e economia elétrica para seu condomínio"
-          subtitulo="Soluções elétricas prediais e residenciais, especializadas em condomínios"
-        />
+      <Navbar />
 
- 
-   <Container 
-  image={sobre}
-  title="SOBRE A LORAIS"
-  subtitle="Oferecemos uma ampla gama de serviços elétricos para condomínios, incluindo manutenção preventiva, instalação de sistemas de segurança, iluminação eficiente e muito mais. Nossa equipe de profissionais altamente qualificados está pronta para garantir a segurança e o conforto dos moradores do seu condomínio."
-  buttonText="Saiba Mais"
-  buttonLink="/sobre"
-/>
+      <div className="home-content">
 
-<ContainerBenefits
-  title="Por que escolher a Lorais?"
-  b1Img={imgBen1}
-  benefit1="Segurança em Primeiro Lugar"
-  description1="Trabalhamos seguindo boas práticas elétricas para garantir instalações seguras, confiáveis e adequadas às necessidades do condomínio."
-  b2Img={imgBen2}
-  benefit2="Responsabilidade e Compromisso com a Entrega"
-  description2="Cumprimos prazos, mantemos comunicação clara com o cliente e realizamos cada serviço com organização e profissionalismo."
-  b3Img={imgBen3}
-  benefit3="Especialização em Condomínios"
-  description3="Atendimento focado em demandas prediais, oferecendo soluções eficientes que reduzem problemas futuros e custos inesperados."
-/>
+        <ScrollReveal>
+          <Hero
+            imagem={BackgroundHero2}
+            titulo="Segurança e economia elétrica para seu condomínio"
+            subtitulo="Soluções elétricas prediais e residenciais, especializadas em condomínios"
+          />
+        </ScrollReveal>
 
-<ContainerService
- title = "Conheça nossos serviços"
-  s1Img = {imgBen1}
-  description1= "Manutenção preventiva para garantir o bom funcionamento dos sistemas elétricos do condomínio."
-  s2Img = {imgBen2}
-  description2= "Instalação de sistemas de segurança, como câmeras e alarmes, para proteger os moradores."
-  s3Img = {imgBen3}
-  description3= "Soluções de iluminação eficiente para áreas comuns, reduzindo custos e melhorando a estética do condomínio."
-/>
+         <ScrollReveal>
+          <Container
+            image={sobre}
+            title="SOBRE A LORAIS"
+            subtitle="Oferecemos uma ampla gama de serviços elétricos para condomínios, incluindo manutenção preventiva, instalação de sistemas de segurança, iluminação eficiente e muito mais. Nossa equipe de profissionais altamente qualificados está pronta para garantir a segurança e o conforto dos moradores do seu condomínio."
+            buttonText="Saiba Mais"
+            buttonLink="/sobre"
+          />
+      </ScrollReveal>
 
-<ContainerAvaliations 
-  title="O que nossos clientes dizem"
-  client1={imgBen1}
-  stars1="★★★★★"
-  text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
-  
-  client2={imgBen2} 
-  stars2="★★★★★"
-  text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
-  
-  client3={imgBen3}
-  stars3="★★★★★"
-  text3="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
-/>
-<Footer />
+        <ScrollReveal>
+          <ContainerBenefits
+            title="Por que escolher a Lorais?"
+            b1Img={imgBen1}
+            benefit1="Segurança em Primeiro Lugar"
+            description1="Trabalhamos seguindo boas práticas elétricas para garantir instalações seguras, confiáveis e adequadas às necessidades do condomínio."
+            b2Img={imgBen2}
+            benefit2="Responsabilidade e Compromisso com a Entrega"
+            description2="Cumprimos prazos, mantemos comunicação clara com o cliente e realizamos cada serviço com organização e profissionalismo."
+            b3Img={imgBen3}
+            benefit3="Especialização em Condomínios"
+            description3="Atendimento focado em demandas prediais, oferecendo soluções eficientes que reduzem problemas futuros e custos inesperados."
+          />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <ContainerService
+            title="Conheça nossos serviços"
+            s1Img={imgBen1}
+            description1="Manutenção preventiva para garantir o bom funcionamento dos sistemas elétricos do condomínio."
+            s2Img={imgBen2}
+            description2="Instalação, manutenção e substituição de sistemas de iluminação de emergência, garantindo funcionamento adequado em casos de queda de energia, conforme normas de segurança elétrica."
+            s3Img={imgBen3}
+            description3="Soluções de iluminação e ventilação eficiente para áreas comuns, reduzindo custos e melhorando a estética do condomínio."
+          />
+        </ScrollReveal>
+
+        <Footer />
 
       </div>
     </div>
   );
-
 }
 
 export default Home;

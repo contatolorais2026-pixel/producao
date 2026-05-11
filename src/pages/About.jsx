@@ -13,69 +13,66 @@ import imgRight from '../assets/images/about/predioesquerdo.png';
 import icon1 from '../assets/images/about/verificado.png';
 import icon2 from '../assets/images/about/casa.png';
 import icon3 from '../assets/images/about/ferramenta.png';
-function About(){
-return(
-    <div className = "about-container">
-<Navbar />
-  <Hero 
-          imagem={imgbanner} 
-          titulo="Sobre"
-         
-      
-/>
-<div className = "about-content">
-<Container
-  image={img}
-  title="Seu Condominío em boas mãos, sua energia em dia"
-  subtitle="A Lorais nasceu para simplificar a elétrica do seu dia a dia. A gente cuida de tudo — desde a troca de uma tomada ou ventilador até a manutenção completa de condomínios com foco em economia e segurança. Seja instalando sensores, iluminação de emergência ou automação, nosso trabalho é garantir que a energia da sua casa funcione perfeitamente, sem que você precise se preocupar com sustos ou desperdícios."
-     
-/>
-<ContainerSections 
-        title="Benefícios para seu condomínio"
-        imgLeft={imgLeft}
-        imgRight={imgRight}
+import ScrollReveal from "../components/ScrowReveal";
 
-    
-        icon1={icon1}
-        subtitle1="Segurança Reforçada"
-        description1="Manutenções rigorosas que evitam curtos-circuitos e garantem a proteção total dos moradores."
-
-    
-        icon2={icon2}
-        subtitle2="Economia de Energia"
-        description2="Otimização do sistema elétrico para reduzir o desperdício e baixar os custos do condomínio."
-
-      
-        icon3={icon3}
-        subtitle3="Valorização Patrimonial"
-        description3="Instalações modernas e seguras que aumentam o valor de mercado do seu imóvel."
+function About() {
+  return (
+    <div className="about-container">
+      <Navbar />
+  <ScrollReveal>
+      <Hero
+        imagem={imgbanner}
+        titulo="Sobre"
       />
+</ScrollReveal>
+      <div className="about-content">
 
-</div>
-<ContainerCeo
-leftText="Sidney Oliveira"
-image={imgCeo}
-rightText="CEO da lorais"
+        <ScrollReveal>
+          <Container
+            image={img}
+            title="Seu Condominío em boas mãos, sua energia em dia"
+            subtitle="A Lorais nasceu para simplificar a elétrica do seu dia a dia. A gente cuida de tudo — desde a troca de uma tomada ou ventilador até a manutenção completa de condomínios com foco em economia e segurança. Seja instalando sensores, iluminação de emergência ou automação, nosso trabalho é garantir que a energia da sua casa funcione perfeitamente, sem que você precise se preocupar com sustos ou desperdícios."
+          />
+        </ScrollReveal>
 
+        <ScrollReveal>
+          <ContainerSections
+            title="Benefícios para seu condomínio"
+            imgLeft={imgLeft}
+            imgRight={imgRight}
+            icon1={icon1}
+            subtitle1="Segurança Reforçada"
+            description1="Manutenções rigorosas que evitam curtos-circuitos e garantem a proteção total dos moradores."
+            icon2={icon2}
+            subtitle2="Economia de Energia"
+            description2="Otimização do sistema elétrico para reduzir o desperdício e baixar os custos do condomínio."
+            icon3={icon3}
+            subtitle3="Valorização Patrimonial"
+            description3="Instalações modernas e seguras que aumentam o valor de mercado do seu imóvel."
+          />
+        </ScrollReveal>
 
-/>
-<Container
-  image={imgcontrato}
-  title="Contrato de prestação de serviço"
-  subtitle="Nosso contrato de prestação de serviço é elaborado 
-  para garantir transparência, segurança e confiança em todas as
-   etapas do trabalho realizado. Nele são definidos com clareza
-    os serviços contratados, prazos, responsabilidades e condições
-     acordadas, assegurando que tanto o cliente quanto a Lorais
-      tenham total alinhamento durante a execução do serviço. Nosso 
-      compromisso é oferecer um atendimento profissional, organizado 
-      e sem surpresas, proporcionando tranquilidade e segurança 
-     desde o início até a conclusão do projeto." />
-  <Footer />
-</div>
-);
+      </div>
 
+      <ScrollReveal>
+        <ContainerCeo
+          leftText="Sidney Oliveira"
+          image={imgCeo}
+          rightText="CEO da lorais"
+        />
+      </ScrollReveal>
 
+      <ScrollReveal>
+        <Container
+          image={imgcontrato}
+          title="Contrato de prestação de serviço"
+          subtitle="Nosso contrato de prestação de serviço é elaborado para garantir transparência, segurança e confiança em todas as etapas do trabalho realizado. Nele são definidos com clareza os serviços contratados, prazos, responsabilidades e condições acordadas, assegurando que tanto o cliente quanto a Lorais tenham total alinhamento durante a execução do serviço. Nosso compromisso é oferecer um atendimento profissional, organizado e sem surpresas, proporcionando tranquilidade e segurança desde o início até a conclusão do projeto."
+        />
+      </ScrollReveal>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default About;

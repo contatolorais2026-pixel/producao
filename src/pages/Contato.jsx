@@ -7,7 +7,7 @@ import iconEmail from "../assets/icons/icon-email.svg";
 import iconWhatsapp from "../assets/icons/icon-whatsapp.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
 import iconLinkedin from "../assets/icons/icon-linkedin.svg";
-
+import ScrollReveal from '../components/ScrowReveal';
 function Contato() {
 
     const [formData, setFormData] = useState({
@@ -46,6 +46,7 @@ function Contato() {
   return (
     <div className="contact">
         <Navbar />
+        <ScrollReveal>
         <div className="contact-container">
             <div className="contact-main">
                 <div className="title-contact">
@@ -117,7 +118,7 @@ function Contato() {
                                 <img src={iconTelefone} alt="" />
                             </div>
                             <div className="info-text">
-                                <strong>(11) 98765-4321</strong>
+                                <strong> (11) 96063-1516</strong>
                                 <span>Segunda a Sexta, 9h as 18h</span>
                             </div>
                         </div>
@@ -168,6 +169,7 @@ function Contato() {
 
             </div>
         </div>
+        </ScrollReveal>
         <Footer />
     </div>
   );

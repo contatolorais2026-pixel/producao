@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nome": "Nome",
+        "nome": "Automação e manutenção preventiva ",
         "descricao": "descricao...",
         "preco": 900,
         "duracao": "3 a 5 dias",
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "nome": "Instalação de Quadro Elétrico",
+        "nome": "Instalações residenciais e econômicas",
         "descricao": "Montagem e instalação de quadro de distribuição elétrica para edifícios, com organização de circuitos e proteção adequada.",
         "preco": 1200,
         "duracao": "2 a 4 dias",
@@ -30,7 +30,7 @@
     },
     {
         "id": 3,
-        "nome": "Manutenção Preventiva Elétrica",
+        "nome": "Instalações de iluminação de emergência",
         "descricao": "Inspeção e manutenção preventiva em sistemas elétricos prediais para evitar falhas e garantir segurança.",
         "preco": 800,
         "duracao": "1 a 2 dias",
@@ -45,7 +45,7 @@
     },
     {
         "id": 4,
-        "nome": "Instalação de Iluminação Predial",
+        "nome": "instalação de sensores de presença",
         "descricao": "Projeto e instalação de sistemas de iluminação interna e externa para prédios residenciais e comerciais.",
         "preco": 1500,
         "duracao": "3 a 6 dias",
@@ -58,7 +58,7 @@
     },
     {
         "id": 5,
-        "nome": "Adequação às Normas Elétricas",
+        "nome": "Instalação de fotocélulas",
         "descricao": "Atualização de instalações elétricas conforme normas vigentes (NBR), garantindo segurança e conformidade legal.",
         "preco": 2000,
         "duracao": "5 a 10 dias",
@@ -74,7 +74,7 @@
     },
     {
         "id": 6,
-        "nome": "Instalação de Sistema de Aterramento",
+        "nome": "Instalação de ventilação,iluminação e tomadas",
         "descricao": "Implantação de sistema de aterramento elétrico para proteção contra descargas elétricas e surtos.",
         "preco": 1300,
         "duracao": "2 a 3 dias",

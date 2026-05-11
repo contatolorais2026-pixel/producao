@@ -5,20 +5,29 @@ import servicos from "../data/servicos.json";
 import BackgroundHero2 from "../assets/images/services/hero.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
+import ScrollReveal from "../components/ScrowReveal";
 
 function Services() {
   return (
     <div className="services">
-       <Navbar />
-      <Hero imagem={BackgroundHero2} titulo="Nosso Serviços" />
+      <Navbar />
+
+      <ScrollReveal>
+        <Hero imagem={BackgroundHero2} titulo="Nosso Serviços" />
+      </ScrollReveal>
 
       <div className="container-services">
-        <div className="container-cards">
-          {servicos.map((servico) => (
-            <CardService data={servico} />
-          ))}
-        </div>
+
+        <ScrollReveal>
+          <div className="container-cards">
+            {servicos.map((servico) => (
+              <CardService key={servico.id} data={servico} />
+            ))}
+          </div>
+        </ScrollReveal>
+
       </div>
+
       <Footer />
     </div>
   );
