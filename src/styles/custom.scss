@@ -1,22 +1,17 @@
-// 🔤 Importa fonte Poppins
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-// 🎨 Paleta LORAIS (ajustada)
-$primary: #1F3F7A;   // azul principal
-$secondary: #F5C531; // amarelo destaque
-$warning: #F5C531;   // reaproveita o amarelo
-$light: #F1F4FB;     // fundo claro
+$primary: #1F3F7A;  
+$secondary: #F5C531; 
+$warning: #F5C531;   
+$light: #F1F4FB;     
 
-// 🎯 Ajustes globais
 $body-bg: #F1F4FB;
 $body-color: #212529;
 
-// 🔤 Fonte global
 $font-family-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 $navbar-dark-color: #ffffff;
 $navbar-dark-hover-color: #F5C531;
 $navbar-dark-active-color: #F5C531;
 
-// Importa Bootstrap
 @import "bootstrap/scss/bootstrap";

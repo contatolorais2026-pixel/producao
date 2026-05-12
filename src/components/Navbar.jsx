@@ -7,34 +7,27 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container d-flex align-items-center justify-content-between">
 
-                {/* LOGO (ESQUERDA) */}
                 <NavLink to="/" className="navbar-brand">
                     <img src={logo} alt="Logo" height="50" />
                 </NavLink>
 
-                {/* BOTÃO (DIREITA - FORA DO COLLAPSE) */}
-                <div className="d-block d-lg-none ms-auto">
-                    <button className="btn btn-secondary fw-bold text-primary px-3">
+                <div className="d-none d-sm-block d-lg-none text-center">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511949694654&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary">
                         SOLICITE UM ORÇAMENTO
-                    </button>
+                    </a>
                 </div>
 
-                {/* TOGGLER (MOBILE) */}
                 <button
                     className="btn btn-transparent ms-2 border-0 d-block d-lg-none"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                 >
-                    <i className="bi bi-list-nested fs-2 text-white"></i>
+                    <i className="bi bi-list fs-2 text-white"></i>
                 </button>
 
-                {/* MENU */}
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-
-                    {/* LINKS CENTRALIZADOS */}
-                    <div className="navbar-nav text-end">
-
+                    <div className="navbar-nav text-center">
                         <NavLink to="/" end className={({ isActive }) =>
                             `nav-link fw-semibold ${isActive ? "active" : ""}`
                         }>
@@ -58,14 +51,16 @@ function Navbar() {
                         }>
                             CONTATOS
                         </NavLink>
-
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5511949694654&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary d-block d-sm-none">
+                            SOLICITE UM ORÇAMENTO
+                        </a>
                     </div>
                 </div>
 
                 <div className="d-none d-lg-block text-center">
-                    <button className="btn btn-secondary fw-bold text-primary px-3">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511949694654&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary px-3">
                         SOLICITE UM ORÇAMENTO
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>
