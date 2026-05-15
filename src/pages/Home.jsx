@@ -8,9 +8,11 @@ import ContainerBene from "../components/containerbenefits.jsx";
 import imgBen1 from '../assets/images/home/seguranca.png';
 import imgBen2 from '../assets/images/home/entrega.jpeg';
 import imgBen3 from '../assets/images/home/especializacao.jpeg';
+import ourservice1 from '../assets/images/services/servico1.png';
+import ourservice2 from '../assets/images/services/servico2.png';
+import ourservice3 from '../assets/images/services/servico3.png';
 import ContainerBenefits from "../components/containerbenefits.jsx";
 import ContainerService from "../components/containerService.jsx";
-import ContainerAvaliations from "../components/containerAvaliations.jsx";
 import Footer from "../components/footer.jsx";
 import ScrollReveal from "../components/ScrowReveal.jsx";
 
@@ -57,11 +59,11 @@ function Home() {
         <ScrollReveal>
           <ContainerService
             title="Conheça nossos serviços"
-            s1Img={imgBen1}
+            s1Img={ourservice1}
             description1="Manutenção preventiva para garantir o bom funcionamento dos sistemas elétricos do condomínio."
-            s2Img={imgBen2}
+            s2Img={ourservice2}
             description2="Instalação, manutenção e substituição de sistemas de iluminação de emergência, garantindo funcionamento adequado em casos de queda de energia, conforme normas de segurança elétrica."
-            s3Img={imgBen3}
+            s3Img={ourservice3}
             description3="Soluções de iluminação e ventilação eficiente para áreas comuns, reduzindo custos e melhorando a estética do condomínio."
           />
         </ScrollReveal>
