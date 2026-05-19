@@ -14,7 +14,7 @@ function CardService ({ data }) {
                 <p>{data.descricao}</p>
             </div>
             <div className="card-btn">
-                <Link to="/" className="btn-primary">SOLICITAR ORÇAMENTO</Link>
+                <Link to="https://wa.me/5511960631516" className="btn-primary">SOLICITAR ORÇAMENTO</Link>
                 <Link to={`/servicos/${data.id}`} className="btn-icon"><img src={IconeEye} alt="icone visualizar" /></Link>
             </div>
         </div>

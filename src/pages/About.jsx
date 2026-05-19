@@ -14,6 +14,7 @@ import icon1 from '../assets/images/about/verificado.png';
 import icon2 from '../assets/images/about/casa.png';
 import icon3 from '../assets/images/about/ferramenta.png';
 import ScrollReveal from "../components/ScrowReveal";
+import ContainerAbout from "../components/containerabout";
 
 function About() {
   return (
@@ -61,6 +62,21 @@ function About() {
           rightText="CEO da lorais"
         />
       </ScrollReveal>
+
+<ScrollReveal>
+  <ContainerAbout
+    title="Quem é Sidney?"
+    description="Sidney é o fundador e proprietário da Lorais, eletricista profissional com experiência em serviços residenciais, comerciais e principalmente em condomínios. Ao longo de sua trajetória, desenvolveu um trabalho baseado em responsabilidade, segurança e compromisso com cada cliente atendido. Sua missão é oferecer soluções elétricas eficientes, prevenindo riscos, reduzindo custos com manutenção corretiva e garantindo o funcionamento adequado de toda a infraestrutura elétrica.
+
+Com foco especial no atendimento a condomínios, Sidney busca entender a realidade de cada local para propor melhorias que aumentem a segurança dos moradores, valorizem o patrimônio e proporcionem economia de energia. A Lorais nasceu justamente dessa visão: levar profissionalismo, organização e confiança para serviços elétricos que muitas vezes são tratados apenas como emergência.
+
+Mais do que executar instalações e manutenções, Sidney trabalha para construir relações de confiança duradouras, oferecendo suporte contínuo, atendimento transparente e serviços realizados dentro das normas técnicas vigentes. Seu objetivo é simples: garantir que síndicos, administradores e moradores tenham tranquilidade sabendo que a parte elétrica está em boas mãos."
+  />
+</ScrollReveal>
+
+
+
+
 
       <ScrollReveal>
         <Container

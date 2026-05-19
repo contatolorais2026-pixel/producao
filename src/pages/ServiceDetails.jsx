@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import ServiceSpecCard from "../components/ServiceSpecCard";
 import servicos from "../data/servicos.json";
-
+import { useNavigate } from "react-router-dom";
 import Duracao from '../assets/icons/icon-duracao.svg'; 
 import Garantia from '../assets/icons/icon-garantia.svg'; 
 import Preco from '../assets/icons/icon-preco.svg'; 
@@ -91,7 +91,7 @@ function ServiceDetails() {
                   <p className="service-description">{servico.descricao}</p>
                 </div>
 
-                <Link to="https://wa.me/" className="quote-button">
+                <Link to="/contatos" className="quote-button">
                   <img src={Orcamento} alt="icone solicitar orçamento" />
                   SOLICITAR ORÇAMENTO
                 </Link>

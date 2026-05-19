@@ -128,7 +128,7 @@ function Contato() {
                                 <img src={iconEmail} alt="" />
                             </div>
                             <div className="info-text">
-                                <strong>contato@email.com</strong>
+                                <strong>sidarol@gmail.com</strong>
                                 <span>Respondemos em até 1 dia útil</span>
                             </div>
                         </div>
@@ -140,12 +140,10 @@ function Contato() {
                             <a href="https://wa.me/5511960631516" className="social-icon">
                                 <img src={iconWhatsapp} alt="" />
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="https://www.instagram.com/sidarol?utm_source=qr&igsh=amdpZXk2OW5vOXJt" className="social-icon">
                                 <img src={iconInstagram} alt="" />
                             </a>
-                            <a href="#" className="social-icon">
-                                <img src={iconLinkedin} alt="" />
-                            </a>
+                    
                         </div>
                     </div>
                 </div>
