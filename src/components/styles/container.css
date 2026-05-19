@@ -103,3 +103,50 @@
     background-color: #264d96;
     box-shadow: 0 12px 25px rgba(31, 63, 122, 0.4);
 }
+
+@media (max-width: 768px) {
+    .container-section {
+        padding: 50px 0;
+    }
+
+    .content-container {
+        flex-direction: column;
+        gap: 35px;
+        width: 90%;
+    }
+
+    .container-image {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .container-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-text h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .yellow-line-container {
+        margin: 8px auto 20px auto;
+    }
+
+    .container-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .container-text a {
+        padding: 12px 40px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+        box-sizing: border-box;
+    }
+}

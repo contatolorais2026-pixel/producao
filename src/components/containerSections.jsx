@@ -15,7 +15,7 @@ function ContainerSections({
 
         <div className="sections-list">
           <div className="section-item">
-            <img src={icon1} className="icon" alt="ícone" />
+            <img src={icon1} className="section-icon" alt="ícone" />
             <div className="section-text">
               <h3>{subtitle1}</h3>
               <p>{description1}</p>
@@ -23,7 +23,7 @@ function ContainerSections({
           </div>
 
           <div className="section-item">
-            <img src={icon2} className="icon" alt="ícone" />
+            <img src={icon2} className="section-icon" alt="ícone" />
             <div className="section-text">
               <h3>{subtitle2}</h3>
               <p>{description2}</p>
@@ -31,7 +31,7 @@ function ContainerSections({
           </div>
 
           <div className="section-item">
-            <img src={icon3} className="icon" alt="ícone" />
+            <img src={icon3} className="section-icon" alt="ícone" />
             <div className="section-text">
               <h3>{subtitle3}</h3>
               <p>{description3}</p>

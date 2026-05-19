@@ -10,9 +10,9 @@ import imgbanner from "../assets/images/services/hero.png";
 import ContainerSections from "../components/ContainerSections";
 import imgLeft from '../assets/images/about/prediodireito.png';
 import imgRight from '../assets/images/about/predioesquerdo.png';
-import icon1 from '../assets/images/about/verificado.png';
-import icon2 from '../assets/images/about/casa.png';
-import icon3 from '../assets/images/about/ferramenta.png';
+import icon1 from '../assets/icons/shield-check-icon.svg';
+import icon2 from '../assets/icons/house-icon.svg';
+import icon3 from '../assets/icons/ferramenta-icon.svg';
 import ScrollReveal from "../components/ScrowReveal";
 
 function About() {

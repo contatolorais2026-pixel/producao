@@ -78,3 +78,41 @@
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 50px 0;
+    }
+
+    .benefits-title {
+        margin-bottom: 30px;
+    }
+
+    .benefits-title h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .yellow-line {
+        width: 140px;
+        margin-top: 10px;
+    }
+
+    .benefits-grid {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .benefits-card {
+        height: 240px;
+    }
+    
+    .benefits-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .benefits-card p {
+        font-size: 0.85rem;
+    }
+}

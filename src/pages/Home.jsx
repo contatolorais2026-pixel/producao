@@ -4,7 +4,6 @@ import sobre from '../assets/images/home/sobre.jpg';
 import BackgroundHero2 from '../assets/images/home/hero_home.png';
 import './styles/Home.css';
 import Container from "../components/container.jsx";
-import ContainerBene from "../components/containerbenefits.jsx";
 import imgBen1 from '../assets/images/home/seguranca.png';
 import imgBen2 from '../assets/images/home/entrega.jpeg';
 import imgBen3 from '../assets/images/home/especializacao.jpeg';

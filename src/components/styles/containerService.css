@@ -123,3 +123,61 @@ background-color: #1B3664;
 .card-footer a:hover {
   color: #ffcb2e;
 }
+
+@media (max-width: 992px) {
+  .services-section {
+    padding: 50px 0;
+  }
+
+  .services-title {
+    margin-bottom: 40px;
+  }
+
+  .services-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .yellow-line {
+    width: 120px;
+  }
+
+  .services-grid {
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .service-card {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .service-card.active {
+    transform: none !important;
+  }
+
+  /* Reset layout effects on hover for touch screens */
+  .services-grid:hover .service-card {
+    filter: none;
+    opacity: 1;
+    transform: none; 
+  }
+
+  .services-grid .service-card:hover {
+    filter: none;
+    opacity: 1;
+    transform: none; 
+    z-index: 1;
+  }
+
+  .services-grid:hover .service-card.active:not(:hover) {
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .card-image {
+    height: 280px;
+  }
+}

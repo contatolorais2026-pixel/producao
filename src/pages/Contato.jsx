@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import "./styles/Contato.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
@@ -18,28 +19,42 @@ function Contato() {
 
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormData({ ...formData, [id]: value });
+
+        setFormData({
+            ...formData,
+            [id]: value
+        });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        const phone_lorais = "5511949694654"; 
-        const { nome, telefone, email, mensagem } = formData;
 
-        const texto = `⚡ *SOLICITAÇÃO DE SERVIÇO ELÉTRICO* ⚡\n` + //TROCAR DEPOIS
-              `──────────────────────────\n` +
-              `🏗️ *Tipo:* Atendimento Predial\n` +
-              `👤 *Cliente:* ${nome}\n` +
-              `📞 *Fone:* ${telefone}\n` +
-              `✉️ *E-mail:* ${email}\n` +
-              `──────────────────────────\n` +
-              `📝 *Relato do Problema/Serviço:* \n` +
-              `_${mensagem}_`;
+        emailjs.send(
+            'service_2gxxxyd',
+            'template_ydml4wy',
+            {
+                nome: formData.nome,
+                telefone: formData.telefone,
+                email: formData.email,
+                mensagem: formData.mensagem
+            },
+            'cfduoXggcP5fYYSPT'
+        )
+        .then(() => {
+            alert('E-mail enviado com sucesso!');
 
-        const url = `https://api.whatsapp.com/send?phone=${phone_lorais}&text=${encodeURIComponent(texto)}`;
-        
-        window.open(url, '_blank');
+            setFormData({
+                nome: '',
+                telefone: '',
+                email: '',
+                mensagem: ''
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+
+            alert('Erro ao enviar e-mail');
+        });
     };
 
   return (
