@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar.jsx";
-import Hero from '../components/Hero';
+import Hero from '../components/herohome.jsx';
 import sobre from '../assets/images/home/sobre.jpg';
 import BackgroundHero2 from '../assets/images/home/hero_home.png';
 import './styles/Home.css';

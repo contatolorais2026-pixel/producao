@@ -146,19 +146,19 @@ function ServiceDetails() {
                 <img src="/servicos/service_example4.png" alt="imagens de serviços" />
               </div>
 
-                  
-            {servico.audio && (
-              <Audio audio={servico.audio} />
-            )}
-       
+
+
+
 
             </div>
-
+        
           </ScrollReveal>
-          
+
         </div>
       </div>
-
+    {servico.audio && (
+              <Audio audio={servico.audio} />
+            )}
       <Footer />
     </div>
   );

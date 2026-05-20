@@ -1,14 +1,20 @@
+
 .audio-container {
     display: flex;
-    justify-content: center;   
-    align-items: center;       
+    justify-content: flex-end; 
+    align-items: center;      
     gap: 15px;
-    margin-top: 20px;
-    width: 100%;
-    padding: 20px;
+    
+    width: 100%;              
+    max-width: 1200px;       
+    
+
+    margin-top: 40px;          
+    margin-bottom: 40px;       
+    padding: 0 20px;          
 }
 
-/* botão */
+
 .audio-button {
     background: #076aff;
     color: white;
@@ -36,7 +42,6 @@
 .audio-button:focus {
     outline: 3px solid #90c2ff;
 }
-
 
 .audio-player {
     width: 280px;
