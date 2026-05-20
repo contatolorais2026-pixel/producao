@@ -25,7 +25,15 @@ function ContainerService({
           </div>
         </div>
 
-
+ <div className="service-card">
+          <div className="card-image">
+            <img src={s3Img} alt="Serviço 3" />
+          </div>
+          <div className="card-footer">
+            <p>{description3}</p>
+          <p> <a href="/servicos/2">Saiba mais...</a></p> 
+          </div>
+        </div>
         <div className="service-card active">
           <div className="card-image">
             <img src={s2Img} alt="Serviço 2" />
@@ -37,15 +45,7 @@ function ContainerService({
         </div>
 
     
-        <div className="service-card">
-          <div className="card-image">
-            <img src={s3Img} alt="Serviço 3" />
-          </div>
-          <div className="card-footer">
-            <p>{description3}</p>
-          <p> <a href="/servicos/6">Saiba mais...</a></p> 
-          </div>
-        </div>
+       
       </div>
     </section>
   );

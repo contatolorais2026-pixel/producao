@@ -6,6 +6,8 @@ import BackgroundHero2 from "../assets/images/services/hero.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import ScrollReveal from "../components/ScrowReveal";
+import AudioServico from "../components/audio.jsx";
+import audioServico from "../../public/audios/audioservico.mp3";
 
 function Services() {
   return (
@@ -25,9 +27,12 @@ function Services() {
             ))}
           </div>
         </ScrollReveal>
-
+         
       </div>
+     <ScrollReveal>
+        <AudioServico audio={audioServico} />
 
+     </ScrollReveal>
       <Footer />
     </div>
   );

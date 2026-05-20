@@ -1,0 +1,44 @@
+.audio-container {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* botão */
+.audio-button {
+    background: #076aff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    height: 40px; 
+}
+
+.audio-button:hover {
+    background: #084298;
+    transform: scale(1.05);
+}
+
+.audio-button:active {
+    transform: scale(0.95);
+}
+
+.audio-button:focus {
+    outline: 3px solid #90c2ff;
+}
+
+
+.audio-player {
+    width: 280px;
+    height: 40px;
+}

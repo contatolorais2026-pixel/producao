@@ -1,0 +1,47 @@
+
+
+.who-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+
+.who-container {
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+
+}
+
+
+.who-container h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.yellow-line-container-about {
+    width: 170px;
+    height: 6px;
+    background-color: #F2C94C;
+    margin: 12px auto 30px auto;
+    display: block;
+}
+
+
+.who-container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}

@@ -15,6 +15,8 @@ import ContainerBenefits from "../components/containerbenefits.jsx";
 import ContainerService from "../components/containerService.jsx";
 import Footer from "../components/footer.jsx";
 import ScrollReveal from "../components/ScrowReveal.jsx";
+import Audio from "../components/audio.jsx";
+import audioHome from "../../public/audios/audiohome.mp3";
 
 function Home() {
   return (
@@ -31,7 +33,7 @@ function Home() {
           />
         </ScrollReveal>
 
-         <ScrollReveal>
+        <ScrollReveal>
           <Container
             image={sobre}
             title="SOBRE A LORAIS"
@@ -39,7 +41,7 @@ function Home() {
             buttonText="Saiba Mais"
             buttonLink="/sobre"
           />
-      </ScrollReveal>
+        </ScrollReveal>
 
         <ScrollReveal>
           <ContainerBenefits
@@ -67,7 +69,12 @@ function Home() {
             description3="Soluções de iluminação e ventilação eficiente para áreas comuns, reduzindo custos e melhorando a estética do condomínio."
           />
         </ScrollReveal>
+        <ScrollReveal>
 
+              <Audio audio={audioHome} />
+        
+
+        </ScrollReveal>
         <Footer />
 
       </div>

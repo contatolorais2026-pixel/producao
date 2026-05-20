@@ -8,6 +8,8 @@ import iconWhatsapp from "../assets/icons/icon-whatsapp.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
 import iconLinkedin from "../assets/icons/icon-linkedin.svg";
 import ScrollReveal from '../components/ScrowReveal';
+import Audio from "../components/audio.jsx";
+import audioContato from "../../public/audios/audiocontato.mp3";
 function Contato() {
 
     const [formData, setFormData] = useState({
@@ -128,7 +130,7 @@ function Contato() {
                                 <img src={iconEmail} alt="" />
                             </div>
                             <div className="info-text">
-                                <strong>contato@email.com</strong>
+                                <strong>sidarol@gmail.com</strong>
                                 <span>Respondemos em até 1 dia útil</span>
                             </div>
                         </div>
@@ -137,15 +139,13 @@ function Contato() {
                         <p className="social-subtitle">Siga-nos nas redes sociais!</p>
                         
                         <div className="social-links">
-                            <a href="#" className="social-icon">
+                            <a href="https://wa.me/5511960631516" className="social-icon">
                                 <img src={iconWhatsapp} alt="" />
                             </a>
-                            <a href="#" className="social-icon">
+                            <a href="https://www.instagram.com/sidarol?utm_source=qr&igsh=amdpZXk2OW5vOXJt" className="social-icon">
                                 <img src={iconInstagram} alt="" />
                             </a>
-                            <a href="#" className="social-icon">
-                                <img src={iconLinkedin} alt="" />
-                            </a>
+                    
                         </div>
                     </div>
                 </div>
@@ -170,6 +170,10 @@ function Contato() {
             </div>
         </div>
         </ScrollReveal>
+         <ScrollReveal>
+        <Audio audio={audioContato} />
+
+     </ScrollReveal>
         <Footer />
     </div>
   );
