@@ -1,7 +1,7 @@
 import "./styles/audio.css";
 import { useRef } from "react";
 
-export default function AudioHome({ audio }) {
+export default function Audio({ audio }) {
   const audioRef = useRef(null);
 
   const tocarAudio = () => {

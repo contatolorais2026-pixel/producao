@@ -8,6 +8,8 @@ import iconWhatsapp from "../assets/icons/icon-whatsapp.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
 import iconLinkedin from "../assets/icons/icon-linkedin.svg";
 import ScrollReveal from '../components/ScrowReveal';
+import Audio from "../components/audio.jsx";
+import audioContato from "../../public/audios/audiocontato.mp3";
 function Contato() {
 
     const [formData, setFormData] = useState({
@@ -168,6 +170,10 @@ function Contato() {
             </div>
         </div>
         </ScrollReveal>
+         <ScrollReveal>
+        <Audio audio={audioContato} />
+
+     </ScrollReveal>
         <Footer />
     </div>
   );

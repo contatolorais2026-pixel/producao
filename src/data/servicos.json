@@ -10,7 +10,8 @@
             "imagem1": "/servicos/servico1.png",
             "imagem2": "/servicos/servico1_segunda.png",
              "imagem3": "/servicos/servico1_terceira.png"
-        }
+        },
+      "audio": "../../public/audios/servico1.mp3"
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
              "imagem1": "/servicos/servico2.png",
             "imagem2": "/servicos/servico2_segunda.png",
              "imagem3": "/servicos/servico2_terceira.png"
-        }
+        },
+        "audio": "../../public/audios/servico2.mp3"
     },
     {
         "id": 3,
@@ -36,7 +38,8 @@
              "imagem1": "/servicos/servico3.png",
             "imagem2": "/servicos/servico3_segunda.png",
              "imagem3": "/servicos/servico3_terceira.png"
-        }
+        },
+        "audio": "../../public/audios/servico3.mp3"
     },
     {
         "id": 4,
@@ -49,7 +52,8 @@
             "imagem1": "/servicos/service_example1.png",
             "imagem2": "/servicos/service_example3.png",
             "imagem3": "/servicos/service_example2.png"
-        }
+        },
+        "audio": "../../public/audios/servico4.mp3"
     },
     {
         "id": 5,
@@ -65,7 +69,8 @@
             "imagem4": "/servicos/service_example1.png",
             "imagem5": "/servicos/service_example3.png",
             "imagem6": "/servicos/service_example2.png"
-        }
+        },
+        "audio": "../../public/audios/servico5.mp3"
     },
     {
         "id": 6,
@@ -82,6 +87,7 @@
             "imagem5": "/servicos/service_example2.png",
             "imagem6": "/servicos/service_example4.png",
             "imagem7": "/servicos/service_example1.png"
-        }
+        },
+        "audio": "../../public/audios/servico6.mp3"
     }
 ]

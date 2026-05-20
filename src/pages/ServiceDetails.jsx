@@ -9,13 +9,12 @@ import Footer from "../components/footer";
 import ServiceSpecCard from "../components/ServiceSpecCard";
 import servicos from "../data/servicos.json";
 import { useNavigate } from "react-router-dom";
-import Duracao from '../assets/icons/icon-duracao.svg'; 
-import Garantia from '../assets/icons/icon-garantia.svg'; 
-import Preco from '../assets/icons/icon-preco.svg'; 
-
-import Arrow from '../assets/icons/arrow.svg'; 
-import Orcamento from '../assets/icons/orcamento_icon.svg'; 
-
+import Duracao from '../assets/icons/icon-duracao.svg';
+import Garantia from '../assets/icons/icon-garantia.svg';
+import Preco from '../assets/icons/icon-preco.svg';
+import Audio from "../components/audio.jsx";
+import Arrow from '../assets/icons/arrow.svg';
+import Orcamento from '../assets/icons/orcamento_icon.svg';
 import ScrollReveal from "../components/ScrowReveal";
 
 function ServiceDetails() {
@@ -71,11 +70,11 @@ function ServiceDetails() {
 
                 <div className="image-carousel">
                   {imagensServico.map((img, index) => (
-                    <img 
+                    <img
                       key={index}
-                      className={`thumbnail ${imagemAtual === img ? "active" : ""}`} 
-                      src={img} 
-                      alt={`Miniatura ${index + 1}`} 
+                      className={`thumbnail ${imagemAtual === img ? "active" : ""}`}
+                      src={img}
+                      alt={`Miniatura ${index + 1}`}
                       onClick={() => setimagemAtual(img)}
                     />
                   ))}
@@ -96,6 +95,7 @@ function ServiceDetails() {
                   SOLICITAR ORÇAMENTO
                 </Link>
               </div>
+
             </ScrollReveal>
 
           </div>
@@ -103,26 +103,26 @@ function ServiceDetails() {
           <ScrollReveal>
             <div className="service-specs-container">
 
-              <ServiceSpecCard 
+              <ServiceSpecCard
                 img={Duracao}
                 altText="Ícone de prazo de entrega"
-                title="PRAZO DE ENTREGA" 
+                title="PRAZO DE ENTREGA"
                 value={servico.duracao}
                 obs="O prazo de entrega pode variar de acordo com o caso apresentado"
               />
 
-              <ServiceSpecCard 
+              <ServiceSpecCard
                 img={Preco}
                 altText="Ícone de valor do serviço"
-                title="VALOR DO SERVIÇO" 
+                title="VALOR DO SERVIÇO"
                 value={new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(servico.preco)}
                 obs="O valor do serviço pode variar de acordo com o caso apresentado"
-              />            
+              />
 
-              <ServiceSpecCard 
+              <ServiceSpecCard
                 img={Garantia}
                 altText="Ícone de tempo de garantia"
-                title="TEMPO DE GARANTIA" 
+                title="TEMPO DE GARANTIA"
                 value={servico.garantia}
                 obs="Tempo de manutenção após a entrega do serviço"
               />
@@ -146,13 +146,20 @@ function ServiceDetails() {
                 <img src="/servicos/service_example4.png" alt="imagens de serviços" />
               </div>
 
-            </div>
-          </ScrollReveal>
+                  
+            {servico.audio && (
+              <Audio audio={servico.audio} />
+            )}
+       
 
-        </div> 
+            </div>
+
+          </ScrollReveal>
+          
+        </div>
       </div>
 
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

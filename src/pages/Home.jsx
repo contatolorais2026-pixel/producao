@@ -15,7 +15,7 @@ import ContainerBenefits from "../components/containerbenefits.jsx";
 import ContainerService from "../components/containerService.jsx";
 import Footer from "../components/footer.jsx";
 import ScrollReveal from "../components/ScrowReveal.jsx";
-import AudioHome from "../components/audio.jsx";
+import Audio from "../components/audio.jsx";
 import audioHome from "../../public/audios/audiohome.mp3";
 
 function Home() {
@@ -71,7 +71,7 @@ function Home() {
         </ScrollReveal>
         <ScrollReveal>
 
-              <AudioHome audio={audioHome} />
+              <Audio audio={audioHome} />
         
 
         </ScrollReveal>
