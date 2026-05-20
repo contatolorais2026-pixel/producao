@@ -14,7 +14,6 @@ function ContainerService({
       </div>
 
       <div className="services-grid">
-        {/* Card 1 */}
         <div className="service-card">
           <div className="card-image">
             <img src={s1Img} alt="Serviço 1" />

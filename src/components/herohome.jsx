@@ -1,6 +1,6 @@
-import './styles/Hero.css';
+import './styles/Herohome.css';
 
-function Hero ({ imagem, titulo, subtitulo }) {
+function Herohome ({ imagem, titulo, subtitulo }) {
     const containerStyle = {
         backgroundImage: `url(${imagem})`,
     }
@@ -18,4 +18,4 @@ function Hero ({ imagem, titulo, subtitulo }) {
 
 }
 
-export default Hero;
+export default Herohome;

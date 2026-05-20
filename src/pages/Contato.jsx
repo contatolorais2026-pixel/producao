@@ -159,10 +159,7 @@ function Contato() {
                             <a href="https://www.instagram.com/sidarol?utm_source=qr&igsh=amdpZXk2OW5vOXJt" className="social-icon">
                                 <img src={iconInstagram} alt="" />
                             </a>
-<<<<<<< HEAD
                     
-=======
->>>>>>> 70cda563d26db5792ab176ad8fafd0546ad86063
                         </div>
                     </div>
                 </div>
