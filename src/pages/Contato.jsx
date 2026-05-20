@@ -30,7 +30,7 @@ function Contato() {
         e.preventDefault();
 
         emailjs.send(
-            'service_2gxxxyd',
+            'service_jdcp26y',
             'template_ydml4wy',
             {
                 nome: formData.nome,
@@ -41,7 +41,7 @@ function Contato() {
             'cfduoXggcP5fYYSPT'
         )
         .then(() => {
-            alert('E-mail enviado com sucesso!');
+            console.log('E-mail enviado com sucesso!');
 
             setFormData({
                 nome: '',
@@ -53,7 +53,7 @@ function Contato() {
         .catch((error) => {
             console.log(error);
 
-            alert('Erro ao enviar e-mail');
+            console.log('Erro ao enviar e-mail');
         });
     };
 

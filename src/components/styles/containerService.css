@@ -20,7 +20,8 @@
   text-transform: uppercase;
 }
 
-.yellow-line {
+.services-title .yellow-line {
+  display: block;
   width: 140px;
   height: 5px;
   background-color: #F2C94C;
@@ -137,7 +138,7 @@ background-color: #1B3664;
     font-size: 1.6rem;
   }
 
-  .yellow-line {
+  .services-title .yellow-line {
     width: 120px;
   }
 
