@@ -1,6 +1,5 @@
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import './styles/ServiceDetails.css'
 
 import ReviewCard from "../components/ReviewCard";
@@ -25,6 +24,18 @@ function ServiceDetails() {
 
   const imagensServico = servico && servico.imagem ? Object.values(servico.imagem) : [];
   const [imagemAtual, setimagemAtual] = useState(imagensServico[0] || "");
+
+  const handlePrevImage = () => {
+    const currentIndex = imagensServico.indexOf(imagemAtual);
+    const newIndex = currentIndex <= 0 ? imagensServico.length - 1 : currentIndex - 1;
+    setimagemAtual(imagensServico[newIndex]);
+  };
+
+  const handleNextImage = () => {
+    const currentIndex = imagensServico.indexOf(imagemAtual);
+    const newIndex = currentIndex >= imagensServico.length - 1 ? 0 : currentIndex + 1;
+    setimagemAtual(imagensServico[newIndex]);
+  };
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -61,11 +72,17 @@ function ServiceDetails() {
             <ScrollReveal>
               <div className="service-images">
                 <div className="primary-image-wrapper">
+                  <button className="main-image-btn left" onClick={handlePrevImage}>
+                    &#10094;
+                  </button>
                   <img
                     id="imagemPrincipal"
                     src={imagemAtual}
                     alt={`Imagem principal do serviço ${servico.nome}`}
                   />
+                  <button className="main-image-btn right" onClick={handleNextImage}>
+                    &#10095;
+                  </button>
                 </div>
 
                 <div className="image-carousel">

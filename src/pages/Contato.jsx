@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import "./styles/Contato.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
@@ -6,7 +7,6 @@ import iconTelefone from "../assets/icons/icon-telefone.svg";
 import iconEmail from "../assets/icons/icon-email.svg";
 import iconWhatsapp from "../assets/icons/icon-whatsapp.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
-import iconLinkedin from "../assets/icons/icon-linkedin.svg";
 import ScrollReveal from '../components/ScrowReveal';
 import Audio from "../components/audio.jsx";
 import audioContato from "../../public/audios/audiocontato.mp3";
@@ -21,28 +21,42 @@ function Contato() {
 
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormData({ ...formData, [id]: value });
+
+        setFormData({
+            ...formData,
+            [id]: value
+        });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        const phone_lorais = "5511949694654"; 
-        const { nome, telefone, email, mensagem } = formData;
 
-        const texto = `⚡ *SOLICITAÇÃO DE SERVIÇO ELÉTRICO* ⚡\n` + //TROCAR DEPOIS
-              `──────────────────────────\n` +
-              `🏗️ *Tipo:* Atendimento Predial\n` +
-              `👤 *Cliente:* ${nome}\n` +
-              `📞 *Fone:* ${telefone}\n` +
-              `✉️ *E-mail:* ${email}\n` +
-              `──────────────────────────\n` +
-              `📝 *Relato do Problema/Serviço:* \n` +
-              `_${mensagem}_`;
+        emailjs.send(
+            'service_jdcp26y',
+            'template_ydml4wy',
+            {
+                nome: formData.nome,
+                telefone: formData.telefone,
+                email: formData.email,
+                mensagem: formData.mensagem
+            },
+            'cfduoXggcP5fYYSPT'
+        )
+        .then(() => {
+            console.log('E-mail enviado com sucesso!');
 
-        const url = `https://api.whatsapp.com/send?phone=${phone_lorais}&text=${encodeURIComponent(texto)}`;
-        
-        window.open(url, '_blank');
+            setFormData({
+                nome: '',
+                telefone: '',
+                email: '',
+                mensagem: ''
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+
+            console.log('Erro ao enviar e-mail');
+        });
     };
 
   return (
@@ -145,7 +159,10 @@ function Contato() {
                             <a href="https://www.instagram.com/sidarol?utm_source=qr&igsh=amdpZXk2OW5vOXJt" className="social-icon">
                                 <img src={iconInstagram} alt="" />
                             </a>
+<<<<<<< HEAD
                     
+=======
+>>>>>>> 70cda563d26db5792ab176ad8fafd0546ad86063
                         </div>
                     </div>
                 </div>
@@ -160,7 +177,7 @@ function Contato() {
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7316.575297340995!2d-46.4773694253167!3d-23.52215441870102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1777495078189!5m2!1spt-BR!2sbr" 
                         width="100%" 
                         height="450" 
-                        style={{ border: 0, borderRadius: '15px' }} 
+                        style={{ border: 0 }} 
                         allowFullScreen="" 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
