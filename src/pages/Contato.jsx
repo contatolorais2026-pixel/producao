@@ -19,6 +19,9 @@ function Contato() {
         mensagem: ''
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+
     const handleChange = (e) => {
         const { id, value } = e.target;
 
@@ -30,6 +33,9 @@ function Contato() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+
+        setIsSubmitting(true);
 
         emailjs.send(
             'service_jdcp26y',
@@ -43,8 +49,7 @@ function Contato() {
             'cfduoXggcP5fYYSPT'
         )
         .then(() => {
-            console.log('E-mail enviado com sucesso!');
-
+            setAlert({ show: true, type: 'success', message: 'E-mail enviado com sucesso!' });
             setFormData({
                 nome: '',
                 telefone: '',
@@ -52,10 +57,12 @@ function Contato() {
                 mensagem: ''
             });
         })
-        .catch((error) => {
-            console.log(error);
-
-            console.log('Erro ao enviar e-mail');
+        .catch(() => {
+            setAlert({ show: true, type: 'error', message: 'Erro ao enviar. Tente novamente.' });
+        })
+        .finally(() => {
+            setIsSubmitting(false);
+            setTimeout(() => setAlert({ show: false, type: '', message: '' }), 3000);
         });
     };
 
@@ -122,7 +129,13 @@ function Contato() {
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="submit-btn">Enviar Mensagem</button>
+                            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                    <><span className="spinner"></span> Enviando...</>
+                                ) : (
+                                    'Enviar Mensagem'
+                                )}
+                            </button>
                         </form>
                     </div>
                     
@@ -189,6 +202,17 @@ function Contato() {
 
      </ScrollReveal>
         <Footer />
+
+        {alert.show && (
+            <div className={`toast-overlay`}>
+                <div className={`toast-alert toast-${alert.type}`}>
+                    <span className="toast-icon">
+                        {alert.type === 'success' ? '✓' : '✕'}
+                    </span>
+                    <span className="toast-message">{alert.message}</span>
+                </div>
+            </div>
+        )}
     </div>
   );
 }

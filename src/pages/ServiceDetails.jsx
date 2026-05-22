@@ -23,7 +23,7 @@ function ServiceDetails() {
   );
 
   const imagensServico = servico && servico.imagem ? Object.values(servico.imagem) : [];
-  const [imagemAtual, setimagemAtual] = useState(imagensServico[0] || "");
+
 
   const handlePrevImage = () => {
     const currentIndex = imagensServico.indexOf(imagemAtual);
@@ -50,6 +50,27 @@ function ServiceDetails() {
   if (!servico) {
     return <p>Serviço não encontrado</p>;
   }
+
+  // ALEATORIAZADOR DAS IMAGENS DE OUTROS SERVICOS
+
+  const [imagemAtual, setimagemAtual] = useState(imagensServico[0] || "");
+  const [randomServices, setRandomServices] = useState([]);
+
+  useEffect(() => {
+    if (!id) return;
+    const outrosServicos = servicos.filter((item) => item.id !== Number(id));
+    const embaralhados = [...outrosServicos].sort(() => 0.5 - Math.random());
+    const selecionados = embaralhados.slice(0, 3).map((item) => {
+      const imagensDoItem = Object.values(item.imagem || {});
+      const imagemAleatoria = imagensDoItem[Math.floor(Math.random() * imagensDoItem.length)] || "";
+      return {
+        id: item.id,
+        nome: item.nome,
+        imagem: imagemAleatoria,
+      };
+    });
+    setRandomServices(selecionados);
+  }, [id]);
 
   return (
     <div className="service-details">
@@ -129,14 +150,6 @@ function ServiceDetails() {
               />
 
               <ServiceSpecCard
-                img={Preco}
-                altText="Ícone de valor do serviço"
-                title="VALOR DO SERVIÇO"
-                value={new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(servico.preco)}
-                obs="O valor do serviço pode variar de acordo com o caso apresentado"
-              />
-
-              <ServiceSpecCard
                 img={Garantia}
                 altText="Ícone de tempo de garantia"
                 title="TEMPO DE GARANTIA"
@@ -158,15 +171,12 @@ function ServiceDetails() {
               </div>
 
               <div className="extra-details-images">
-                <img src="/servicos/service_example2.png" alt="imagens de serviços" />
-                <img src="/servicos/service_example3.png" alt="imagens de serviços" />
-                <img src="/servicos/service_example4.png" alt="imagens de serviços" />
+                {randomServices.map((item) => (
+                  <Link key={item.id} to={`/servicos/${item.id}`} className="extra-details-link">
+                    <img src={item.imagem} alt={item.nome} />
+                  </Link>
+                ))}
               </div>
-
-
-
-
-
             </div>
         
           </ScrollReveal>

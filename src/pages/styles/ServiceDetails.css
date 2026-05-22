@@ -8,6 +8,7 @@
 .service-details {
     width: 100%;
     overflow-x: hidden;
+    background-color: #FEFEFE;
 }
 
 .service-content > .reveal {
@@ -41,7 +42,6 @@
     max-width: 78rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     margin: 10vh 0;
     padding: 0 1.25rem;
     flex-direction: column;
@@ -226,9 +226,26 @@
     margin-top: 2.5rem;
 }
 
-.extra-details-images img {
+.extra-details-link {
+    display: block;
     width: 32%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-details-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.extra-details-link img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /* RESPONSIVIDADE */
@@ -265,12 +282,22 @@
     }
 
     .extra-details-images {
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 0.625rem 0.25rem 1.25rem 0.25rem;
+        scrollbar-width: none;
     }
-
-    .extra-details-images img {
-        width: 100%;
-        margin-bottom: 0.9375rem;
+    .extra-details-images::-webkit-scrollbar {
+        display: none;
+    }
+    .extra-details-link {
+        width: 80%;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 0;
     }
 }
 
