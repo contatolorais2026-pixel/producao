@@ -77,13 +77,9 @@
         "duracao": "2 a 3 dias",
         "garantia": "90 dias",
         "imagem": {
-            "imagem1": "/servicos/service_example2.png",
-            "imagem2": "/servicos/service_example4.png",
-            "imagem3": "/servicos/service_example1.png",
-            "imagem4": "/servicos/service_example3.png",
-            "imagem5": "/servicos/service_example2.png",
-            "imagem6": "/servicos/service_example4.png",
-            "imagem7": "/servicos/service_example1.png"
+              "imagem1": "/servicos/servico6_primeira.png",
+            "imagem2": "/servicos/servico6_segunda.png",
+            "imagem3": "/servicos/servico6_terceira.png"
         },
         "audio": "../../public/audios/servico6.mp3"
     }

@@ -15,6 +15,8 @@ import icon2 from '../assets/icons/house-icon.svg';
 import icon3 from '../assets/icons/ferramenta-icon.svg';
 import ScrollReveal from "../components/ScrowReveal";
 import ContainerAbout from "../components/containerabout";
+import Audio from "../components/audio.jsx";
+import audioabout from "../../public/audios/audioabout.mp3";
 
 function About() {
   return (
@@ -32,7 +34,7 @@ function About() {
           <Container
             image={img}
             title="Seu Condominío em boas mãos, sua energia em dia"
-            subtitle="A Lorais nasceu para simplificar a elétrica do seu dia a dia. A gente cuida de tudo — desde a troca de uma tomada ou ventilador até a manutenção completa de condomínios com foco em economia e segurança. Seja instalando sensores, iluminação de emergência ou automação, nosso trabalho é garantir que a energia da sua casa funcione perfeitamente, sem que você precise se preocupar com sustos ou desperdícios."
+            subtitle="A Lorais nasceu da união entre experiência técnica, compromisso com a qualidade e a busca por soluções elétricas seguras e eficientes. Atuando nas áreas de instalações elétricas, manutenções residenciais e serviços prediais, a empresa oferece atendimento transparente, responsabilidade técnica e atenção aos detalhes em cada projeto realizado. Com uma trajetória construída ao longo de anos de atuação nos setores de elétrica, telecomunicações e tecnologia, a Lorais carrega valores como confiança, profissionalismo e dedicação ao cliente. Mais do que executar serviços, a empresa busca entregar segurança, eficiência e tranquilidade para cada pessoa atendida."
           />
         </ScrollReveal>
 
@@ -64,14 +66,19 @@ function About() {
       </ScrollReveal>
 
 <ScrollReveal>
-  <ContainerAbout
-    title="Quem é Sidney?"
-    description="Sidney é o fundador e proprietário da Lorais, eletricista profissional com experiência em serviços residenciais, comerciais e principalmente em condomínios. Ao longo de sua trajetória, desenvolveu um trabalho baseado em responsabilidade, segurança e compromisso com cada cliente atendido. Sua missão é oferecer soluções elétricas eficientes, prevenindo riscos, reduzindo custos com manutenção corretiva e garantindo o funcionamento adequado de toda a infraestrutura elétrica.
+<ContainerAbout
+  title="A história por trás da Lorais"
+  quote="“ Mais do que um negócio, este empreendimento também representa um legado: o desejo de ensinar ao meu filho o valor da profissão, do trabalho técnico e da construção de algo sólido através do conhecimento e da dedicação.”"
+  description="Sou profissional da área de elétrica, telecomunicações e tecnologia, com uma trajetória construída entre experiência prática, gestão de projetos e atendimento técnico ao cliente. Minha formação começou no SENAI, em Elétrica, onde iniciei minha atuação trabalhando em condomínio com instalação de sistemas de iluminação de emergência e sensores de presença. Mais tarde, ampliei meus conhecimentos com formação técnica em Telecomunicações e graduação em Informática com Gestão de Negócios pela FATEC.
 
-Com foco especial no atendimento a condomínios, Sidney busca entender a realidade de cada local para propor melhorias que aumentem a segurança dos moradores, valorizem o patrimônio e proporcionem economia de energia. A Lorais nasceu justamente dessa visão: levar profissionalismo, organização e confiança para serviços elétricos que muitas vezes são tratados apenas como emergência.
+Ao longo da minha carreira, tive a oportunidade de atuar em grandes empresas como Embratel e TIM, trabalhando com gestão de projetos, infraestrutura e Pós-vendas, sempre unindo conhecimento técnico, organização e foco em soluções eficientes.
 
-Mais do que executar instalações e manutenções, Sidney trabalha para construir relações de confiança duradouras, oferecendo suporte contínuo, atendimento transparente e serviços realizados dentro das normas técnicas vigentes. Seu objetivo é simples: garantir que síndicos, administradores e moradores tenham tranquilidade sabendo que a parte elétrica está em boas mãos."
-  />
+Com o passar dos anos, percebi uma grande carência de mão de obra qualificada e comprometida no setor de instalações elétricas e manutenções residenciais e prediais. Foi essa percepção que me motivou a empreender e criar um serviço baseado em confiança, segurança, qualidade e atendimento transparente.
+
+Hoje, realizo instalações elétricas residenciais, manutenções prediais, reparos e soluções elétricas com responsabilidade e atenção aos detalhes, buscando sempre oferecer um trabalho bem executado e seguro para cada cliente.
+
+"
+/>
 </ScrollReveal>
 
 
@@ -85,9 +92,13 @@ Mais do que executar instalações e manutenções, Sidney trabalha para constru
           subtitle="Nosso contrato de prestação de serviço é elaborado para garantir transparência, segurança e confiança em todas as etapas do trabalho realizado. Nele são definidos com clareza os serviços contratados, prazos, responsabilidades e condições acordadas, assegurando que tanto o cliente quanto a Lorais tenham total alinhamento durante a execução do serviço. Nosso compromisso é oferecer um atendimento profissional, organizado e sem surpresas, proporcionando tranquilidade e segurança desde o início até a conclusão do projeto."
         />
       </ScrollReveal>
+  <ScrollReveal>
+        <Audio audio={audioabout} />
 
+     </ScrollReveal>
       <Footer />
     </div>
+    
   );
 }
 

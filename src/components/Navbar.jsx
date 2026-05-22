@@ -51,7 +51,7 @@ function Navbar() {
                         }>
                             CONTATOS
                         </NavLink>
-                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5511949694654&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary d-block d-sm-none">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5511960631516&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary d-block d-sm-none">
                             SOLICITE UM ORÇAMENTO
                         </a>
                     </div>
