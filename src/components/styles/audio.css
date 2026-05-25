@@ -1,3 +1,4 @@
+
 .audio-container {
     position: fixed;
     bottom: 20px;
@@ -10,14 +11,16 @@
     padding: 10px 16px;
     border-radius: 30px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     max-width: calc(100% - 40px);
     box-sizing: border-box;
+    overflow: hidden; 
 }
 
+
 .audio-container.minimized {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     padding: 0;
     border-radius: 50%;
     justify-content: center;
@@ -32,15 +35,19 @@
     display: none;
 }
 
+.audio-container.minimized .minimize-button {
+    display: none;
+}
+
 .audio-button {
     background: #076aff;
     color: white;
     border: none;
     padding: 10px 18px;
-    border-radius: 8px;
+    border-radius: 20px; 
     font-size: 15px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s, transform 0.2s;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -50,12 +57,16 @@
     flex-shrink: 0;
 }
 
+
 .audio-container.minimized .audio-button {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     padding: 0;
+    background: #076aff;
+    font-size: 20px; 
 }
+
 
 .audio-button:hover {
     background: #084298;
@@ -70,30 +81,41 @@
     outline: 3px solid #90c2ff;
 }
 
+
 .audio-player {
     width: 280px;
     height: 40px;
 }
+
 
 .minimize-button {
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 0;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    font-size: 14px;
+    transition: transform 0.2s;
 }
+
+.minimize-button:hover {
+    transform: scale(1.2);
+}
+
+
+
 
 @media (max-width: 500px) {
     .audio-container {
-        bottom: 10px;
-        right: 10px;
+        bottom: 15px;
+        right: 15px;
         padding: 8px 12px;
         gap: 10px;
-        max-width: calc(100% - 20px);
+        max-width: calc(100% - 30px);
     }
 
     .audio-player {
@@ -101,13 +123,25 @@
     }
 
     .audio-button {
-        padding: 8px 12px;
+        padding: 8px 14px;
         font-size: 14px;
+        height: 36px;
+    }
+
+  
+    .audio-container.minimized {
+        width: 55px;
+        height: 55px;
     }
 }
 
+
 @media (max-width: 360px) {
     .audio-player {
-        width: 140px;
+        width: 130px;
+    }
+    
+    .audio-button {
+        padding: 8px 10px;
     }
 }

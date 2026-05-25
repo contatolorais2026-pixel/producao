@@ -68,12 +68,8 @@ function Home() {
             description3="Soluções de iluminação e ventilação eficiente para áreas comuns, reduzindo custos e melhorando a estética do condomínio."
           />
         </ScrollReveal>
-        <ScrollReveal>
-
-              <Audio audio={audioHome} />
-        
-
-        </ScrollReveal>
+     
+        <Audio audio={audioHome} />
         <Footer />
 
       </div>

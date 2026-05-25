@@ -197,10 +197,7 @@ function Contato() {
             </div>
         </div>
         </ScrollReveal>
-         <ScrollReveal>
-        <Audio audio={audioContato} />
-
-     </ScrollReveal>
+          <Audio audio={audioContato} />
         <Footer />
 
         {alert.show && (

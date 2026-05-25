@@ -29,10 +29,10 @@ function Services() {
         </div>
          
       </div>
-     <ScrollReveal>
+   
         <AudioServico audio={audioServico} />
 
-     </ScrollReveal>
+    
       <Footer />
     </div>
   );

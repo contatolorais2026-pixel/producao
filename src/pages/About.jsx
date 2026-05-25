@@ -92,10 +92,9 @@ Hoje, realizo instalações elétricas residenciais, manutenções prediais, rep
           subtitle="Nosso contrato de prestação de serviço é elaborado para garantir transparência, segurança e confiança em todas as etapas do trabalho realizado. Nele são definidos com clareza os serviços contratados, prazos, responsabilidades e condições acordadas, assegurando que tanto o cliente quanto a Lorais tenham total alinhamento durante a execução do serviço. Nosso compromisso é oferecer um atendimento profissional, organizado e sem surpresas, proporcionando tranquilidade e segurança desde o início até a conclusão do projeto."
         />
       </ScrollReveal>
-  <ScrollReveal>
+ 
         <Audio audio={audioabout} />
 
-     </ScrollReveal>
       <Footer />
     </div>
     
