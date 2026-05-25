@@ -37,3 +37,15 @@
     box-shadow: 0 0 30px rgba(8, 38, 92, 0.979); 
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .text-side h2 {
+        font-size: 1.5rem;
+    }
+}

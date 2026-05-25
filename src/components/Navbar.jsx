@@ -12,7 +12,7 @@ function Navbar() {
                 </NavLink>
 
                 <div className="d-none d-sm-block d-lg-none text-center">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511949694654&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511960631516&text=Olá! Desejo solicitar um orçamento." className="btn btn-secondary fw-bold text-primary">
                         SOLICITE UM ORÇAMENTO
                     </a>
                 </div>

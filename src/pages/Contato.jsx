@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import "./styles/Contato.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
@@ -6,7 +7,6 @@ import iconTelefone from "../assets/icons/icon-telefone.svg";
 import iconEmail from "../assets/icons/icon-email.svg";
 import iconWhatsapp from "../assets/icons/icon-whatsapp.svg";
 import iconInstagram from "../assets/icons/icon-instagram.svg";
-import iconLinkedin from "../assets/icons/icon-linkedin.svg";
 import ScrollReveal from '../components/ScrowReveal';
 import Audio from "../components/audio.jsx";
 import audioContato from "../../public/audios/audiocontato.mp3";
@@ -19,30 +19,51 @@ function Contato() {
         mensagem: ''
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+
     const handleChange = (e) => {
         const { id, value } = e.target;
-        setFormData({ ...formData, [id]: value });
+
+        setFormData({
+            ...formData,
+            [id]: value
+        });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        const phone_lorais = "5511949694654"; 
-        const { nome, telefone, email, mensagem } = formData;
+        if (isSubmitting) return;
 
-        const texto = `⚡ *SOLICITAÇÃO DE SERVIÇO ELÉTRICO* ⚡\n` + //TROCAR DEPOIS
-              `──────────────────────────\n` +
-              `🏗️ *Tipo:* Atendimento Predial\n` +
-              `👤 *Cliente:* ${nome}\n` +
-              `📞 *Fone:* ${telefone}\n` +
-              `✉️ *E-mail:* ${email}\n` +
-              `──────────────────────────\n` +
-              `📝 *Relato do Problema/Serviço:* \n` +
-              `_${mensagem}_`;
+        setIsSubmitting(true);
 
-        const url = `https://api.whatsapp.com/send?phone=${phone_lorais}&text=${encodeURIComponent(texto)}`;
-        
-        window.open(url, '_blank');
+        emailjs.send(
+            'service_jdcp26y',
+            'template_ydml4wy',
+            {
+                nome: formData.nome,
+                telefone: formData.telefone,
+                email: formData.email,
+                mensagem: formData.mensagem
+            },
+            'cfduoXggcP5fYYSPT'
+        )
+        .then(() => {
+            setAlert({ show: true, type: 'success', message: 'E-mail enviado com sucesso!' });
+            setFormData({
+                nome: '',
+                telefone: '',
+                email: '',
+                mensagem: ''
+            });
+        })
+        .catch(() => {
+            setAlert({ show: true, type: 'error', message: 'Erro ao enviar. Tente novamente.' });
+        })
+        .finally(() => {
+            setIsSubmitting(false);
+            setTimeout(() => setAlert({ show: false, type: '', message: '' }), 3000);
+        });
     };
 
   return (
@@ -108,7 +129,13 @@ function Contato() {
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="submit-btn">Enviar Mensagem</button>
+                            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                    <><span className="spinner"></span> Enviando...</>
+                                ) : (
+                                    'Enviar Mensagem'
+                                )}
+                            </button>
                         </form>
                     </div>
                     
@@ -160,7 +187,7 @@ function Contato() {
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7316.575297340995!2d-46.4773694253167!3d-23.52215441870102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1777495078189!5m2!1spt-BR!2sbr" 
                         width="100%" 
                         height="450" 
-                        style={{ border: 0, borderRadius: '15px' }} 
+                        style={{ border: 0 }} 
                         allowFullScreen="" 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
@@ -170,11 +197,19 @@ function Contato() {
             </div>
         </div>
         </ScrollReveal>
-         <ScrollReveal>
-        <Audio audio={audioContato} />
-
-     </ScrollReveal>
+          <Audio audio={audioContato} />
         <Footer />
+
+        {alert.show && (
+            <div className={`toast-overlay`}>
+                <div className={`toast-alert toast-${alert.type}`}>
+                    <span className="toast-icon">
+                        {alert.type === 'success' ? '✓' : '✕'}
+                    </span>
+                    <span className="toast-message">{alert.message}</span>
+                </div>
+            </div>
+        )}
     </div>
   );
 }

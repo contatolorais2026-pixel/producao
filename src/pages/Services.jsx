@@ -20,19 +20,19 @@ function Services() {
 
       <div className="container-services">
 
-        <ScrollReveal>
-          <div className="container-cards">
-            {servicos.map((servico) => (
-              <CardService key={servico.id} data={servico} />
-            ))}
-          </div>
-        </ScrollReveal>
+        <div className="container-cards">
+          {servicos.map((servico) => (
+            <ScrollReveal key={servico.id}>
+              <CardService data={servico} />
+            </ScrollReveal>
+          ))}
+        </div>
          
       </div>
-     <ScrollReveal>
+   
         <AudioServico audio={audioServico} />
 
-     </ScrollReveal>
+    
       <Footer />
     </div>
   );

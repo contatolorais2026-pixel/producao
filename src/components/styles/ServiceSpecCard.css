@@ -1,12 +1,15 @@
 .spec-card {
     background-color: #F1F4FB;
-    width: 327px;
-    height: 160px;
+    width: 100%;
+    max-width: 20.4375rem;
+    height: auto;
+    min-height: 10rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px;
-    border-radius: 18px;
+    padding: 1.25rem;
+    border-radius: 1.125rem;
+    box-sizing: border-box;
 }
 
 .spec-header {
@@ -14,33 +17,33 @@
     display: flex;
     justify-content: flex-start;
     align-items: center; 
-    gap: 16px; 
-    margin-bottom: 15px;
+    gap: 1rem; 
+    margin-bottom: 0.9375rem;
 }
 
 .spec-title-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
-    height: 48px;                  
-    padding: 2px 0;                
+    height: 3rem;                  
+    padding: 0.125rem 0;                
 }
 
 .spec-title {
     font-weight: 200;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #1F3F7A;
     margin: 0;
 }
 
 .spec-value {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0;
 }
 
 .spec-observation-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #333;
     margin: 0;
 }

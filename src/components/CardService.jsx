@@ -1,9 +1,13 @@
+import { useRef, useState, useEffect } from 'react';
 import './styles/CardService.css';
 import IconeEye from '../assets/icons/eye.svg'; 
 import { Link } from "react-router-dom";
 
 function CardService ({ data }) {
-   
+    const limit = 145;
+    const isLongText = data.descricao.length > limit;
+    const textToShow = isLongText ? data.descricao.substring(0, limit) + '... ' : data.descricao;
+
     return (
         <div className="conteiner-card">
             <div className="imagem-card">
@@ -11,7 +15,12 @@ function CardService ({ data }) {
             </div>
             <div className="card-info"> 
                 <h1>{data.nome}</h1>
-                <p>{data.descricao}</p>
+                <p className="card-desc">
+                    {textToShow}
+                    {isLongText && (
+                        <Link to={`/servicos/${data.id}`} className="ver-mais-link">Veja mais</Link>
+                    )}
+                </p>
             </div>
             <div className="card-btn">
                 <Link to="https://wa.me/5511960631516" className="btn-primary">SOLICITAR ORÇAMENTO</Link>
