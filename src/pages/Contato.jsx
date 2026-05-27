@@ -37,16 +37,20 @@ function Contato() {
 
         setIsSubmitting(true);
 
+        const serviceId = import.meta.env.VITE_SERVICE_ID;
+        const templateId = import.meta.env.VITE_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+        
         emailjs.send(
-            'service_jdcp26y',
-            'template_ydml4wy',
+            serviceId,
+            templateId,
             {
                 nome: formData.nome,
                 telefone: formData.telefone,
                 email: formData.email,
                 mensagem: formData.mensagem
             },
-            'cfduoXggcP5fYYSPT'
+            publicKey
         )
         .then(() => {
             setAlert({ show: true, type: 'success', message: 'E-mail enviado com sucesso!' });
@@ -183,15 +187,16 @@ function Contato() {
                 </div>
 
                 <div className="map-wrapper" style={{ marginTop: '2rem', marginBottom: '4rem', width: '100%' }}>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7316.575297340995!2d-46.4773694253167!3d-23.52215441870102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1777495078189!5m2!1spt-BR!2sbr" 
-                        width="100%" 
-                        height="450" 
-                        style={{ border: 0 }} 
-                        allowFullScreen="" 
-                        loading="lazy" 
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24580.994858597358!2d-46.5272829952187!3d-23.676431917942548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1779849382336!5m2!1spt-BR!2sbr"
+                        width="600"
+                        height="450"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                        >
+                    </iframe>
                 </div>
 
             </div>
