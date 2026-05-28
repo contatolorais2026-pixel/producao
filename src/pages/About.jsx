@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 import Hero from '../components/Hero';
 import imgcontrato from '../assets/images/about/contrato.png';
 import imgbanner from "../assets/images/services/hero.png";
-import ContainerSections from "../components/ContainerSections";
+import ContainerSections from "../components/containersections";
 import imgLeft from '../assets/images/about/prediodireito.png';
 import imgRight from '../assets/images/about/predioesquerdo.png';
 import icon1 from '../assets/icons/shield-check-icon.svg';
