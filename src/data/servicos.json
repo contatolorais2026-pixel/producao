@@ -11,7 +11,7 @@
             "imagem2": "/servicos/servico1_segunda.png",
              "imagem3": "/servicos/servico1_terceira.png"
         },
-      "audio": "../../public/audios/servico1.mp3"
+      "audio": "audios/servico1.mp3"
     },
     {
         "id": 2,
