@@ -165,7 +165,7 @@ function ServiceDetails() {
 
               <div className="section-title-wrapper">
                 <h1 className="section-title">
-                  Detalhes do serviço
+                  Outros  serviços
                 </h1>
                 <div className="title-divider"></div>
               </div>
